@@ -12,35 +12,59 @@ package hw61;
 Для обработки и вывода результата используйте потоки (Stream).
  */
 
+
 public class Student {
 
     private String name;
-    private int score; // балл
+    private int scoreFirstSemester;// балл
+    private int scoreSecondSemester;
+    private int scoreThirdSemester;
 
-    public Student(String name, int score) {
+
+    public Student(String name, int firstScore, int secondScore, int thirdScore) {
         this.name = name;
-        this.score = score;
+        this.scoreFirstSemester = firstScore;
+        this.scoreSecondSemester = secondScore;
+        this.scoreThirdSemester = thirdScore;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getScore() {
-        return score;
+    public int getScoreFirstSemester() {
+        return scoreFirstSemester;
+    }
+
+    public int getScoreSecondSemester() {
+        return scoreSecondSemester;
+    }
+
+    public int getScoreThirdSemester() {
+        return scoreThirdSemester;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setScoreFirstSemester(int scoreFirstSemester) {
+        this.scoreFirstSemester = scoreFirstSemester;
+    }
+
+    public void setScoreSecondSemester(int scoreSecondSemester) {
+        this.scoreSecondSemester = scoreSecondSemester;
+    }
+
+    public void setScoreThirdSemester(int scoreThirdSemester) {
+        this.scoreThirdSemester = scoreThirdSemester;
     }
 
     @Override
     public String toString() {
-        return name + " (" + score + ")";
+        return name + " (" + scoreFirstSemester + ", " +
+                scoreSecondSemester + ", " +
+                scoreThirdSemester + ")";
     }
 }
 
