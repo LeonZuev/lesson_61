@@ -62,9 +62,11 @@ public class Student {
 
     @Override
     public String toString() {
+        double totalScore = (scoreFirstSemester + scoreSecondSemester + scoreThirdSemester);
         return name + " (" + scoreFirstSemester + ", " +
                 scoreSecondSemester + ", " +
-                scoreThirdSemester + ")";
+                scoreThirdSemester + ") - Average: " +
+                totalScore / 2;
     }
 }
 

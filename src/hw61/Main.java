@@ -39,7 +39,7 @@ public class Main {
 
         List<Student> result = students.stream()
                 .filter(s -> (s.getScoreFirstSemester() + s.getScoreSecondSemester() + s.getScoreFirstSemester()) >= minScore)
-                .sorted(Comparator.comparingDouble((Student s) ->(s.getScoreFirstSemester() + s.getScoreSecondSemester() + s.getScoreThirdSemester()) / 2.0))
+                .sorted(Comparator.comparingDouble((Student s) ->(s.getScoreFirstSemester() + s.getScoreSecondSemester() + s.getScoreThirdSemester()) / 2.0).reversed())
                 .limit(10)
                 .toList();
         result.forEach(System.out::println);
